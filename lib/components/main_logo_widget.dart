@@ -3,12 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MainLogoWidget extends StatelessWidget {
-  final double logoSize;
-
-  MainLogoWidget({@required this.logoSize});
-
   @override
   Widget build(BuildContext context) {
+    double logoSize = 40;
     return Container(
       padding: EdgeInsets.only(top: 65.0),
       alignment: Alignment.center,
