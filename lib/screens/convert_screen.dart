@@ -4,6 +4,8 @@ import 'package:convertor/constants.dart';
 import 'package:convertor/units_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'dart:math' as math;
 
 // ignore: must_be_immutable
 class ConvertScreen extends StatefulWidget {
@@ -75,6 +77,18 @@ class _ConvertScreenState extends State<ConvertScreen> {
                     },
                   ),
                 ],
+              ),
+            ),
+            Transform.rotate(
+              angle: 90 * math.pi / 180,
+              child: CircleAvatar(
+                child: Icon(
+                  FontAwesomeIcons.exchangeAlt,
+                  color: kMainColor,
+                  size: logoSize,
+                ),
+                backgroundColor: Colors.white,
+                radius: logoSize,
               ),
             ),
             Container(

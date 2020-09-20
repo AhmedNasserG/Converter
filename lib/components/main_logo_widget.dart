@@ -7,7 +7,6 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 class MainLogoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double logoSize = 40;
     return Container(
       padding: EdgeInsets.only(top: 65.0),
       alignment: Alignment.center,

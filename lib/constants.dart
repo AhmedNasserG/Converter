@@ -27,3 +27,4 @@ const kContainerElementStyle = BoxDecoration(
   borderRadius: BorderRadius.all(Radius.circular(10.0)),
 );
 const kMainColor = Colors.purple;
+const double logoSize = 40;
