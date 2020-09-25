@@ -14,8 +14,8 @@ double getConversionRate(int categoryIndex, int unitIndex) {
 }
 
 Future<List> getCurrenciesSymbols() async {
-  Map data = await getOnlineData(url);
-  Map symbols = data['symbols'];
+  Map data = await getOnlineData(kCurrenciesSymbolsUrl);
+  Map symbols = data['results'];
   return symbols.keys.toList();
 }
 

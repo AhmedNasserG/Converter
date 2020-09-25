@@ -28,5 +28,6 @@ const kContainerElementStyle = BoxDecoration(
 );
 const kMainColor = Colors.purple;
 const double logoSize = 40;
-const kApiKey = 'da579a4b4f1d07ba742ea784613990d2';
-const url = 'http://data.fixer.io/api/symbols?access_key=$kApiKey';
+const kApiKey = 'b023322a99bf9b0b6075';
+const kCurrenciesSymbolsUrl =
+    'https://free.currconv.com/api/v7/currencies?apiKey=$kApiKey';
