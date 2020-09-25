@@ -22,8 +22,15 @@ class ConvertScreen extends StatefulWidget {
 }
 
 class _ConvertScreenState extends State<ConvertScreen> {
-  void updateOutput() {
+  void updateOutput() async {
     if (widget.input != null &&
+        widget.fromUnitIndex != null &&
+        widget.toUnitIndex != null &&
+        getCategoryName(widget.categoryIndex) == 'Currency') {
+      widget.value = await exchange(unitsList[widget.fromUnitIndex],
+          unitsList[widget.toUnitIndex], widget.input);
+      setState(() {});
+    } else if (widget.input != null &&
         widget.fromUnitIndex != null &&
         widget.toUnitIndex != null) {
       setState(() {
@@ -43,6 +50,11 @@ class _ConvertScreenState extends State<ConvertScreen> {
     } catch (e) {
       print(e);
     }
+  }
+
+  Future<double> exchange(String from, String to, double input) async {
+    double rate = await getCurrenciesExchangeRate(from, to);
+    return input * rate;
   }
 
   @override
