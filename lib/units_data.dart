@@ -19,6 +19,14 @@ Future<List> getCurrenciesSymbols() async {
   return symbols.keys.toList();
 }
 
+Future<double> getCurrenciesExchangeRate(String from, String to) async {
+  String url =
+      kCurrenciesExchangeUrl + '${from}_$to&compact=ultra&apiKey=$kApiKey';
+  Map data = await getOnlineData(url);
+  double rate = data['${from}_$to'];
+  return rate;
+}
+
 double calculate(
     int categoryIndex, int fromUnitIndex, int toUnitIndex, double value) {
   double fromConvRate = getConversionRate(categoryIndex, fromUnitIndex);

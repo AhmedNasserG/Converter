@@ -31,3 +31,4 @@ const double logoSize = 40;
 const kApiKey = 'b023322a99bf9b0b6075';
 const kCurrenciesSymbolsUrl =
     'https://free.currconv.com/api/v7/currencies?apiKey=$kApiKey';
+const kCurrenciesExchangeUrl = 'https://free.currconv.com/api/v7/convert?q=';
