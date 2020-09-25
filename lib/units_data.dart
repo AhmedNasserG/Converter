@@ -1,3 +1,6 @@
+import 'package:convertor/networking.dart';
+import 'constants.dart';
+
 String getImage(int categoryIndex) {
   return 'images/${unitsData.keys.toList()[categoryIndex].toString().toLowerCase().replaceAll(' ', '_')}.png';
 }
@@ -10,6 +13,11 @@ double getConversionRate(int categoryIndex, int unitIndex) {
   return unitsData[getCategoryName(categoryIndex)][unitIndex]['conversion'];
 }
 
+Future<List> getCurrenciesSymbols() async {
+  Map data = await getOnlineData(url);
+  Map symbols = data['symbols'];
+  return symbols.keys.toList();
+}
 double calculate(
     int categoryIndex, int fromUnitIndex, int toUnitIndex, double value) {
   double fromConvRate = getConversionRate(categoryIndex, fromUnitIndex);

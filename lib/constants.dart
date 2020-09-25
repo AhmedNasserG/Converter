@@ -28,3 +28,5 @@ const kContainerElementStyle = BoxDecoration(
 );
 const kMainColor = Colors.purple;
 const double logoSize = 40;
+const kApiKey = 'da579a4b4f1d07ba742ea784613990d2';
+const url = 'http://data.fixer.io/api/symbols?access_key=$kApiKey';
