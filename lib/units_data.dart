@@ -18,6 +18,7 @@ Future<List> getCurrenciesSymbols() async {
   Map symbols = data['symbols'];
   return symbols.keys.toList();
 }
+
 double calculate(
     int categoryIndex, int fromUnitIndex, int toUnitIndex, double value) {
   double fromConvRate = getConversionRate(categoryIndex, fromUnitIndex);
@@ -92,5 +93,6 @@ Map unitsData = {
     {"name": "Watt hour", "conversion": 0.000277778},
     {"name": "British thermal unit", "conversion": 0.000947817},
     {"name": "US therm", "conversion": 0.0000000094804}
-  ]
+  ],
+  "Currency": [],
 };

@@ -33,6 +33,29 @@ class _ConvertScreenState extends State<ConvertScreen> {
     }
   }
 
+  List unitsList = [];
+  void getOnlineSymbols() async {
+    try {
+      List currencies = await getCurrenciesSymbols();
+      setState(() {
+        unitsList = currencies;
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    String currentCategory = '${unitsData.keys.toList()[widget.categoryIndex]}';
+    if (currentCategory == 'Currency') {
+      getOnlineSymbols();
+    } else {
+      unitsList = unitsData['$currentCategory'];
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -70,6 +93,7 @@ class _ConvertScreenState extends State<ConvertScreen> {
                     height: 20.0,
                   ),
                   UnitsDropDownButton(
+                    unitsList: unitsList,
                     categoryIndex: widget.categoryIndex,
                     unitIndexCallBack: (value) {
                       widget.fromUnitIndex = value;
@@ -112,6 +136,7 @@ class _ConvertScreenState extends State<ConvertScreen> {
                     height: 20.0,
                   ),
                   UnitsDropDownButton(
+                    unitsList: unitsList,
                     categoryIndex: widget.categoryIndex,
                     unitIndexCallBack: (value) {
                       widget.toUnitIndex = value;
