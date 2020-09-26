@@ -73,7 +73,7 @@ class _ConvertScreenState extends State<ConvertScreen> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: Colors.purple,
+        backgroundColor: kMainColor,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

@@ -1,3 +1,4 @@
+import 'package:convertor/constants.dart';
 import 'package:convertor/units_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -15,12 +16,6 @@ class ConverterHeader extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // IconButton(
-          //     alignment: Alignment.topLeft,
-          //     icon: Icon(Icons.arrow_back_ios),
-          //     onPressed: () {
-          //       Navigator.pop(context);
-          //     }),
           CircleAvatar(
             backgroundColor: Colors.white,
             radius: 40.0,
@@ -29,7 +24,7 @@ class ConverterHeader extends StatelessWidget {
               child: Image(
                 image: AssetImage(getImage(categoryIndex)),
                 height: 50.0,
-                color: Colors.purple,
+                color: kMainColor,
               ),
             ),
           ),
