@@ -11,7 +11,7 @@ const kTextFieldDecoration = InputDecoration(
 );
 
 const kContainerDecoration = BoxDecoration(
-  color: Colors.grey,
+  color: Color(0xFFBDBDBD),
   borderRadius: BorderRadius.all(Radius.circular(20.0)),
 );
 
@@ -26,7 +26,7 @@ const kContainerElementStyle = BoxDecoration(
   color: Colors.white,
   borderRadius: BorderRadius.all(Radius.circular(10.0)),
 );
-const kMainColor = Colors.purple;
+const kMainColor = Color(0xFF2196f3);
 const double logoSize = 40;
 const kApiKey = 'b023322a99bf9b0b6075';
 const kCurrenciesSymbolsUrl =

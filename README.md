@@ -82,7 +82,7 @@ A simple Flutter application provide a powerful tool to convert various things.
 
 ## Coming Features && Updates
 
-- [ ] Currencies (online Feature)
+- [x] Currencies (online Feature)
 
 - [ ] Gold Prices (online Feature)
 
